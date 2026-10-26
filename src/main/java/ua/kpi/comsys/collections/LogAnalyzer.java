@@ -82,6 +82,10 @@ public class LogAnalyzer {
             return null;
         }
 
+        if (!sections[0].endsWith(" ") || !sections[2].startsWith(" ")) {
+            return null;
+        }
+
         String[] start = sections[0].trim().split("\\s+", 4);
         String[] end = sections[2].trim().split("\\s+");
 
